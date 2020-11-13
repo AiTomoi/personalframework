@@ -127,6 +127,12 @@ hr {
   margin: 3em 0;
 }
 
+.hide-visually {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
 /* BUTTONS */
 .button {
   display: inline-block;
@@ -258,9 +264,18 @@ body {
   font-size: 1.5em;
   margin: 0;
 }
+.site-header .site-id {
+  display: flex;
+  align-items: center;
+}
+.site-header .logo {
+  max-width: 40px;
+  margin-right: 0.5em;
+}
 
 /* SITE FOOTER */
 .site-footer {
+  background-color: black;
   display: flex;
   justify-content: center;
 }
@@ -284,6 +299,9 @@ body {
 
 section {
   padding: 4em 0;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
 }
 
 /* HERO SECTION */
@@ -293,13 +311,13 @@ section {
   text-align: center;
   padding: 6em 0;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
 }
 .hero h1 {
   margin-bottom: 0.25em;
   color: white;
 }
 .hero p {
-  margin-bottom: 1em auto;
+  margin-bottom: 1em 0;
 }
