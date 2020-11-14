@@ -314,6 +314,9 @@ section {
   display: flex;
   align-items: center;
 }
+.hero .container {
+  width: 100%;
+}
 .hero h1 {
   margin-bottom: 0.25em;
   color: white;
