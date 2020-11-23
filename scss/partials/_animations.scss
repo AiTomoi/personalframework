@@ -1,0 +1,15 @@
+/* ANIMATIONS */
+
+
+// SCROLL TRIGGERED ANIMATIONS
+
+
+section[data-sectionstate] {
+    transition: all ease-out 2s;
+    opacity: 0;
+}
+
+section[data-sectionstate="active"] {
+    opacity: 1;
+
+}
