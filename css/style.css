@@ -391,11 +391,56 @@ section {
 }
 
 /* ANIMATIONS */
-section[data-sectionstate] {
-  transition: all ease-out 2s;
-  opacity: 0;
+#section01 .one-half:nth-child(1) {
+  transition: all 2s ease-out;
+  transform: translate(-50px, 0);
+}
+#section01[data-sectionstate=active] .one-half:nth-child(1) {
+  transform: translate(0, 0);
+}
+#section01 .one-half:nth-child(2) {
+  transition: all 2 ease-out;
+  transform: translate(50px, 0);
+}
+#section01[data-sectionstate=active] .one-half:nth-child(2) {
+  transform: translate(0, 0);
 }
 
-section[data-sectionstate=active] {
+#section02 .one-half:nth-child(1) {
+  transition: all 2s ease-out;
+  transform: translate(-50px, -50px);
+}
+#section02[data-sectionstate=active] .one-half:nth-child(1) {
+  transform: translate(0, 0);
+}
+#section02 .one-half:nth-child(2) {
+  transition: all 2 ease-out;
+  transform: translate(50px, 50px);
+}
+#section02[data-sectionstate=active] .one-half:nth-child(2) {
+  transform: translate(0, 0);
+}
+
+.animate-scale-in,
+[data-sectionstate=inactive] .animate-scale-in {
+  transition: all 1s ease-out;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+[data-sectionstate=active] .animate-scale-in {
   opacity: 1;
+  transform: scale(1);
+}
+
+.animate-slide-up,
+[data-sectionstate=inactive] .animate-slide-up {
+  transition: all 1s ease-out;
+  opacity: 0;
+  transform: translate(0, 100px);
+}
+
+[data-sectionstate=active] .animate-slide-up {
+  opacity: 1;
+  transform: translate(0, 0);
 }
