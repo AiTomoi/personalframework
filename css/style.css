@@ -391,6 +391,22 @@ section {
 }
 
 /* ANIMATIONS */
+.hero h1, .hero p, .hero .button,
+.hero[data-sectionstate=inactive] h1,
+.hero[data-sectionstate=inactive] p,
+.hero[data-sectionstate=inactive] .button {
+  transition: all 1s ease-out;
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+.hero[data-sectionstate=active] h1, .hero[data-sectionstate=active] p, .hero[data-sectionstate=active] .button,
+.hero[data-sectionstate=inactive][data-sectionstate=active] h1,
+.hero[data-sectionstate=inactive][data-sectionstate=active] p,
+.hero[data-sectionstate=inactive][data-sectionstate=active] .button {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 #section01 .one-half:nth-child(1) {
   transition: all 2s ease-out;
   transform: translate(-50px, 0);

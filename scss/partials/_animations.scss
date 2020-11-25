@@ -2,6 +2,28 @@
 
 
 // SCROLL TRIGGERED ANIMATIONS
+
+.hero,
+.hero[data-sectionstate="inactive"] {
+
+    h1,p,.button {
+        transition: all 1s ease-out;
+        opacity: 0;
+        transform: translate(0,-20px);
+    }
+
+    &[data-sectionstate="active"] {
+
+        h1, p, .button {
+            opacity: 1;
+            transform: translate(0,0);
+        }
+
+    }
+
+}
+
+
 #section01 { 
  //ANIMATE THE FIRST COLUMN
  .one-half:nth-child(1) {
