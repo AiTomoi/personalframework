@@ -391,18 +391,30 @@ section {
 }
 
 /* ANIMATIONS */
-.hero h1, .hero p, .hero .button,
-.hero[data-sectionstate=inactive] h1,
-.hero[data-sectionstate=inactive] p,
-.hero[data-sectionstate=inactive] .button {
+.hero .container *,
+.hero[data-sectionstate=inactive] .container * {
   transition: all 1s ease-out;
   opacity: 0;
   transform: translate(0, -20px);
 }
-.hero[data-sectionstate=active] h1, .hero[data-sectionstate=active] p, .hero[data-sectionstate=active] .button,
-.hero[data-sectionstate=inactive][data-sectionstate=active] h1,
-.hero[data-sectionstate=inactive][data-sectionstate=active] p,
-.hero[data-sectionstate=inactive][data-sectionstate=active] .button {
+.hero .container *:nth-child(1),
+.hero[data-sectionstate=inactive] .container *:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.hero .container *:nth-child(2),
+.hero[data-sectionstate=inactive] .container *:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.hero .container *:nth-child(3),
+.hero[data-sectionstate=inactive] .container *:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.hero .container *:nth-child(4),
+.hero[data-sectionstate=inactive] .container *:nth-child(4) {
+  transition-delay: 0.8s;
+}
+.hero[data-sectionstate=active] .container *,
+.hero[data-sectionstate=inactive][data-sectionstate=active] .container * {
   opacity: 1;
   transform: translate(0, 0);
 }
@@ -437,18 +449,6 @@ section {
   transform: translate(0, 0);
 }
 
-.animate-scale-in,
-[data-sectionstate=inactive] .animate-scale-in {
-  transition: all 1s ease-out;
-  opacity: 0;
-  transform: scale(0.8);
-}
-
-[data-sectionstate=active] .animate-scale-in {
-  opacity: 1;
-  transform: scale(1);
-}
-
 .animate-slide-up,
 [data-sectionstate=inactive] .animate-slide-up {
   transition: all 1s ease-out;
@@ -457,6 +457,34 @@ section {
 }
 
 [data-sectionstate=active] .animate-slide-up {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.animate-drop-in-with-delay *,
+[data-sectionstate=inactive] .animate-drop-in-with-delay * {
+  transition: all 1s ease-out;
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+.animate-drop-in-with-delay *:nth-child(1),
+[data-sectionstate=inactive] .animate-drop-in-with-delay *:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.animate-drop-in-with-delay *:nth-child(2),
+[data-sectionstate=inactive] .animate-drop-in-with-delay *:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.animate-drop-in-with-delay *:nth-child(3),
+[data-sectionstate=inactive] .animate-drop-in-with-delay *:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.animate-drop-in-with-delay *:nth-child(4),
+[data-sectionstate=inactive] .animate-drop-in-with-delay *:nth-child(4) {
+  transition-delay: 0.8s;
+}
+
+[data-sectionstate=active] .animate-drop-in-with-delay * {
   opacity: 1;
   transform: translate(0, 0);
 }
